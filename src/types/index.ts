@@ -17,7 +17,7 @@ export interface Product {
   id: string;
   name: string;
   subtitle: string;
-  category: 'blankets' | 'amigurumi' | 'wearables' | 'spa-gifts' | 'home-decor';
+  category: 'blankets' | 'amigurumi' | 'wearables' | 'spa-gifts' | 'small-crochet' | 'cards-letters' | 'home-decor';
   price: number;
   originalPrice?: number;
   image: string;

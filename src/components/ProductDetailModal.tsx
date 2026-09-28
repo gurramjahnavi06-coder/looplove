@@ -138,15 +138,15 @@ export const ProductDetailModal: React.FC = () => {
                 {/* Price Display */}
                 <div className="mt-3 flex items-baseline gap-3">
                   <span className="text-2xl font-serif font-bold text-[#2D2825] font-mono tabular-nums">
-                    ${product.price}
+                    ₹{product.price}
                   </span>
                   {product.originalPrice && (
                     <span className="text-sm text-[#998C82] line-through font-mono">
-                      ${product.originalPrice}
+                      ₹{product.originalPrice}
                     </span>
                   )}
                   <span className="text-xs text-[#736860]">
-                    · Free shipping over $85
+                    · Free shipping over ₹999
                   </span>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export const ProductDetailModal: React.FC = () => {
                     className="flex-1 py-3 text-xs sm:text-sm font-semibold text-white bg-[#2D2825] hover:bg-[#403833] rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2"
                   >
                     <span>Add to Bag</span>
-                    <span className="font-mono">· ${(product.price * quantity).toFixed(0)}</span>
+                    <span className="font-mono">· ₹{(product.price * quantity).toFixed(0)}</span>
                   </button>
 
                   <button

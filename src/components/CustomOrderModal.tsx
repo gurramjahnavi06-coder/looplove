@@ -44,32 +44,41 @@ export const CustomOrderModal: React.FC = () => {
     );
   };
 
-  // Real-time live estimate calculation based on complexity
+  // Real-time live estimate calculation based on complexity in Rupees
   const getEstimate = () => {
-    let basePrice = 75;
-    let baseHours = 8;
+    let basePrice = 699;
+    let baseHours = 4;
 
-    if (itemType.includes('Blanket')) {
-      basePrice = 145;
+    if (itemType.includes('Small Crochet') || itemType.includes('Bookmark')) {
+      basePrice = 349;
+      baseHours = 3;
+    } else if (itemType.includes('Vintage') || itemType.includes('Letter')) {
+      basePrice = 799;
+      baseHours = 4;
+    } else if (itemType.includes('Card')) {
+      basePrice = 399;
+      baseHours = 2;
+    } else if (itemType.includes('Blanket')) {
+      basePrice = 3499;
       baseHours = 18;
       if (sizeOption.includes('Queen')) {
-        basePrice += 70;
+        basePrice += 900;
         baseHours += 10;
       }
     } else if (itemType.includes('Amigurumi')) {
-      basePrice = 58;
+      basePrice = 1299;
       baseHours = 7;
     } else if (itemType.includes('Wearable') || itemType.includes('Cardigan')) {
-      basePrice = 160;
+      basePrice = 3899;
       baseHours = 24;
     } else if (itemType.includes('Tote')) {
-      basePrice = 68;
+      basePrice = 1599;
       baseHours = 10;
     }
 
-    if (fiberChoice === 'Highland Wool') basePrice += 15;
-    if (fiberChoice === 'Bamboo Silk Blend') basePrice += 20;
-    if (personalizationText.trim()) basePrice += 10; // engraved wood tag
+    if (fiberChoice === 'Highland Wool') basePrice += 300;
+    if (fiberChoice === 'Bamboo Silk Blend') basePrice += 400;
+    if (personalizationText.trim()) basePrice += 150; // engraved wood tag / calligraphy
 
     return { price: basePrice, hours: baseHours };
   };
@@ -155,7 +164,7 @@ export const CustomOrderModal: React.FC = () => {
                 <div>Item: {itemType}</div>
                 <div>Palette: {selectedColors.join(', ')}</div>
                 <div>Fiber: {fiberChoice}</div>
-                <div>Estimate: ~${estPrice} ({estHours} artisan hours)</div>
+                <div>Estimate: ~₹{estPrice} ({estHours} artisan hours)</div>
               </div>
               <p className="text-xs text-[#7B7068]">
                 Master Artisan Elena will review your colorway and email your personalized pattern swatch and turnaround schedule within 24 hours.
@@ -186,6 +195,9 @@ export const CustomOrderModal: React.FC = () => {
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                   {[
+                    'Small Crochet Charms & Bookmarks',
+                    'Vintage Letter & Sepia Photo Keepsake',
+                    'Handmade Botanical Greeting Cards',
                     'Heirloom Throw Blanket',
                     'Amigurumi Character / Pet',
                     'Botanical Market Tote',
@@ -386,7 +398,7 @@ export const CustomOrderModal: React.FC = () => {
                   <div className="text-right pl-3 border-l border-[#DACABE]">
                     <span className="text-xs text-[#7B7068] block">Estimated Quote:</span>
                     <span className="font-serif font-bold text-xl text-[#B25329] font-mono tabular-nums">
-                      ${estPrice}
+                      ₹{estPrice}
                     </span>
                   </div>
                 </div>

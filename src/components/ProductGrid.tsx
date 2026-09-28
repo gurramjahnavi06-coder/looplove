@@ -20,6 +20,8 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
 
   const categories = [
     { id: 'all', label: 'All Creations' },
+    { id: 'small-crochet', label: 'Small Crochet Charms' },
+    { id: 'cards-letters', label: 'Cards & Vintage Letters' },
     { id: 'blankets', label: 'Heirloom Throws' },
     { id: 'amigurumi', label: 'Amigurumi Keepsakes' },
     { id: 'wearables', label: 'Wearables & Totes' },

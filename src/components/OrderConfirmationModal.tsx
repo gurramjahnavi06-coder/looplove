@@ -116,7 +116,7 @@ export const OrderConfirmationModal: React.FC = () => {
                   )}
                 </div>
                 <span className="font-mono font-bold text-[#2D2825]">
-                  ${(item.product.price * item.quantity).toFixed(0)}
+                  ₹{(item.product.price * item.quantity).toFixed(0)}
                 </span>
               </div>
             ))}
@@ -124,29 +124,29 @@ export const OrderConfirmationModal: React.FC = () => {
             <div className="pt-2 border-t border-[#EADBCC] space-y-1 text-xs text-[#5C524C]">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="font-mono">${activeReceipt.subtotal.toFixed(0)}</span>
+                <span className="font-mono">₹{activeReceipt.subtotal.toFixed(0)}</span>
               </div>
               {activeReceipt.discount > 0 && (
                 <div className="flex justify-between text-emerald-700">
                   <span>Discount</span>
-                  <span className="font-mono">-${activeReceipt.discount.toFixed(2)}</span>
+                  <span className="font-mono">-₹{activeReceipt.discount.toFixed(2)}</span>
                 </div>
               )}
               {activeReceipt.giftWrapFee > 0 && (
                 <div className="flex justify-between text-[#8C431E]">
                   <span>Artisan Gift Wrapping</span>
-                  <span className="font-mono">+${activeReceipt.giftWrapFee}</span>
+                  <span className="font-mono">+₹{activeReceipt.giftWrapFee}</span>
                 </div>
               )}
               <div className="flex justify-between">
                 <span>Shipping</span>
                 <span className="font-mono">
-                  {activeReceipt.shipping === 0 ? 'FREE' : `$${activeReceipt.shipping}`}
+                  {activeReceipt.shipping === 0 ? 'FREE' : `₹${activeReceipt.shipping}`}
                 </span>
               </div>
               <div className="flex justify-between text-sm font-bold text-[#2D2825] pt-2 border-t border-[#EADBCC]">
                 <span>Total Paid</span>
-                <span className="font-serif font-mono">${activeReceipt.total.toFixed(2)}</span>
+                <span className="font-serif font-mono">₹{activeReceipt.total.toFixed(2)}</span>
               </div>
             </div>
           </div>

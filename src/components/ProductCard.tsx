@@ -117,11 +117,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className="flex items-baseline gap-2">
             {product.originalPrice && (
               <span className="text-xs text-[#998C82] line-through font-mono tabular-nums">
-                ${product.originalPrice}
+                ₹{product.originalPrice}
               </span>
             )}
             <span className="text-base font-bold text-[#2D2825] font-mono tabular-nums">
-              ${product.price}
+              ₹{product.price}
             </span>
           </div>
         </div>

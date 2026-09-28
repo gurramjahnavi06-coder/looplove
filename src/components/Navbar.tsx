@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       {/* Top promotional bar - slim, restrained */}
       <div className="bg-[#EFE7DC] border-b border-[#E3D7C8] px-4 py-2 text-center text-xs text-[#5C4A3E] font-medium tracking-wide">
-        Complimentary gift wrap & handwritten botanical note on all orders · Free shipping over $85
+        Complimentary gift wrap & handwritten botanical note on all orders · Free shipping across India over ₹999
       </div>
 
       {/* Main Top Bar Contract: 3 Zones */}
@@ -69,12 +69,24 @@ export const Navbar: React.FC<NavbarProps> = ({
           </a>
 
           {/* Zone 2: 4-6 clean text navigation links */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#4A423D]">
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-[#4A423D]">
             <button
               onClick={() => handleCategoryClick('all')}
               className="hover:text-[#B25329] transition-colors whitespace-nowrap"
             >
-              Shop Collection
+              Shop All
+            </button>
+            <button
+              onClick={() => handleCategoryClick('small-crochet')}
+              className="hover:text-[#B25329] transition-colors whitespace-nowrap text-[#B25329]"
+            >
+              Small Crochet
+            </button>
+            <button
+              onClick={() => handleCategoryClick('cards-letters')}
+              className="hover:text-[#B25329] transition-colors whitespace-nowrap text-[#8C431E]"
+            >
+              Cards & Vintage Letters
             </button>
             <button
               onClick={() => handleCategoryClick('blankets')}
@@ -86,25 +98,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleCategoryClick('amigurumi')}
               className="hover:text-[#B25329] transition-colors whitespace-nowrap"
             >
-              Amigurumi Keepsakes
+              Amigurumi
             </button>
             <button
               onClick={() => handleCategoryClick('spa-gifts')}
               className="hover:text-[#B25329] transition-colors whitespace-nowrap"
             >
-              Curated Gift Sets
+              Gift Sets
             </button>
             <button
               onClick={handleReviewsClick}
               className="hover:text-[#B25329] transition-colors whitespace-nowrap"
             >
               Community Praise
-            </button>
-            <button
-              onClick={handleStoryClick}
-              className="hover:text-[#B25329] transition-colors whitespace-nowrap"
-            >
-              Our Fiber Story
             </button>
           </nav>
 
@@ -171,6 +177,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                 All Products
               </button>
               <button
+                onClick={() => handleCategoryClick('small-crochet')}
+                className="text-left px-3 py-2 rounded hover:bg-[#F2EBE1] text-[#B25329] font-semibold"
+              >
+                Small Crochet Charms
+              </button>
+              <button
+                onClick={() => handleCategoryClick('cards-letters')}
+                className="text-left px-3 py-2 rounded hover:bg-[#F2EBE1] text-[#8C431E] font-semibold"
+              >
+                Cards & Vintage Letters
+              </button>
+              <button
                 onClick={() => handleCategoryClick('blankets')}
                 className="text-left px-3 py-2 rounded hover:bg-[#F2EBE1]"
               >
@@ -180,25 +198,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => handleCategoryClick('amigurumi')}
                 className="text-left px-3 py-2 rounded hover:bg-[#F2EBE1]"
               >
-                Amigurumi Plushies
-              </button>
-              <button
-                onClick={() => handleCategoryClick('wearables')}
-                className="text-left px-3 py-2 rounded hover:bg-[#F2EBE1]"
-              >
-                Totes & Wearables
+                Amigurumi Keepsakes
               </button>
               <button
                 onClick={() => handleCategoryClick('spa-gifts')}
                 className="text-left px-3 py-2 rounded hover:bg-[#F2EBE1]"
               >
                 Spa & Gift Sets
-              </button>
-              <button
-                onClick={handleReviewsClick}
-                className="text-left px-3 py-2 rounded hover:bg-[#F2EBE1]"
-              >
-                Customer Reviews
               </button>
             </div>
 

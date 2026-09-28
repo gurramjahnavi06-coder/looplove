@@ -307,8 +307,8 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const cartSubtotal = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const cartTotalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const freeShippingThreshold = 85;
-  const shippingFee = cartSubtotal >= freeShippingThreshold || cartSubtotal === 0 ? 0 : 7;
+  const freeShippingThreshold = 999;
+  const shippingFee = cartSubtotal >= freeShippingThreshold || cartSubtotal === 0 ? 0 : 99;
 
   const completeCheckout = (details: {
     customerName: string;
@@ -324,7 +324,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     cardLast4?: string;
   }): OrderReceipt => {
     const orderId = `LL-${Math.floor(10000 + Math.random() * 90000)}`;
-    const giftWrapFee = cart.some((i) => i.giftWrap) ? 5 : 0;
+    const giftWrapFee = cart.some((i) => i.giftWrap) ? 79 : 0;
     const discount = cartSubtotal * discountRate;
     const finalTotal = Math.max(0, cartSubtotal - discount + shippingFee + giftWrapFee);
 

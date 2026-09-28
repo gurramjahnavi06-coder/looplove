@@ -56,6 +56,30 @@ export const Footer: React.FC = () => {
                   }}
                   className="hover:text-white transition-colors"
                 >
+                  Small Crochet Charms & Bookmarks
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#catalog-section"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-white transition-colors"
+                >
+                  Cards & Vintage Letter Keepsakes
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#catalog-section"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Heirloom Waffle Throws
                 </a>
               </li>
@@ -69,30 +93,6 @@ export const Footer: React.FC = () => {
                   className="hover:text-white transition-colors"
                 >
                   Amigurumi Keepsakes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#catalog-section"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="hover:text-white transition-colors"
-                >
-                  Granny Square Totes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#catalog-section"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="hover:text-white transition-colors"
-                >
-                  Botanical Spa Gift Baskets
                 </a>
               </li>
             </ul>

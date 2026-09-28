@@ -73,12 +73,12 @@ export const CartDrawer: React.FC = () => {
                 </span>
               ) : (
                 <span>
-                  Add <strong className="text-[#2D2825] font-mono">${amountNeededForFreeShipping.toFixed(0)}</strong> more for complimentary delivery
+                  Add <strong className="text-[#2D2825] font-mono">₹{amountNeededForFreeShipping.toFixed(0)}</strong> more for complimentary delivery
                 </span>
               )}
             </span>
             <span className="font-mono text-[11px] font-medium text-[#7B7068]">
-              ${freeShippingThreshold} threshold
+              ₹{freeShippingThreshold} threshold
             </span>
           </div>
           <div className="w-full h-1.5 bg-[#E2D4C3] rounded-full overflow-hidden">
@@ -178,7 +178,7 @@ export const CartDrawer: React.FC = () => {
                     </div>
 
                     <span className="text-xs font-bold text-[#2D2825] font-mono tabular-nums">
-                      ${(item.product.price * item.quantity).toFixed(0)}
+                      ₹{(item.product.price * item.quantity).toFixed(0)}
                     </span>
                   </div>
                 </div>
@@ -226,30 +226,30 @@ export const CartDrawer: React.FC = () => {
             <div className="space-y-1.5 text-xs text-[#5C524C] pt-2 border-t border-[#EADBCC]">
               <div className="flex justify-between">
                 <span>Basket Subtotal</span>
-                <span className="font-mono text-[#2D2825]">${cartSubtotal.toFixed(0)}</span>
+                <span className="font-mono text-[#2D2825]">₹{cartSubtotal.toFixed(0)}</span>
               </div>
               {discountRate > 0 && (
                 <div className="flex justify-between text-emerald-700">
                   <span>Discount ({promoCodeApplied})</span>
-                  <span className="font-mono">-${discountAmount.toFixed(2)}</span>
+                  <span className="font-mono">-₹{discountAmount.toFixed(2)}</span>
                 </div>
               )}
               {giftWrapFee > 0 && (
                 <div className="flex justify-between text-[#8C431E]">
                   <span>Artisan Gift Wrapping</span>
-                  <span className="font-mono">+${giftWrapFee}</span>
+                  <span className="font-mono">+₹{giftWrapFee}</span>
                 </div>
               )}
               <div className="flex justify-between">
                 <span>Shipping</span>
                 <span className="font-mono text-[#2D2825]">
-                  {shippingFee === 0 ? 'FREE' : `$${shippingFee}`}
+                  {shippingFee === 0 ? 'FREE' : `₹${shippingFee}`}
                 </span>
               </div>
               <div className="flex justify-between text-sm font-bold text-[#2D2825] pt-2 border-t border-[#EADBCC]">
                 <span>Total Due</span>
                 <span className="font-serif font-mono tabular-nums text-base">
-                  ${grandTotal.toFixed(2)}
+                  ₹{grandTotal.toFixed(2)}
                 </span>
               </div>
             </div>

@@ -434,7 +434,7 @@ export const CheckoutModal: React.FC = () => {
                         </div>
 
                         <span className="font-mono font-bold text-[#2D2825]">
-                          ${(item.product.price * item.quantity).toFixed(0)}
+                          ₹{(item.product.price * item.quantity).toFixed(0)}
                         </span>
                       </div>
                     ))}
@@ -444,33 +444,33 @@ export const CheckoutModal: React.FC = () => {
                   <div className="space-y-1.5 text-xs text-[#5C524C] pt-4 mt-2 border-t border-[#DFCBB9]">
                     <div className="flex justify-between">
                       <span>Subtotal</span>
-                      <span className="font-mono text-[#2D2825]">${cartSubtotal.toFixed(0)}</span>
+                      <span className="font-mono text-[#2D2825]">₹{cartSubtotal.toFixed(0)}</span>
                     </div>
 
                     {discountRate > 0 && (
                       <div className="flex justify-between text-emerald-700">
                         <span>Discount ({promoCodeApplied})</span>
-                        <span className="font-mono">-${discountAmount.toFixed(2)}</span>
+                        <span className="font-mono">-₹{discountAmount.toFixed(2)}</span>
                       </div>
                     )}
 
                     {giftWrapFee > 0 && (
                       <div className="flex justify-between text-[#8C431E]">
                         <span>Complimentary Gift Box & Twine</span>
-                        <span className="font-mono">+${giftWrapFee}</span>
+                        <span className="font-mono">+₹{giftWrapFee}</span>
                       </div>
                     )}
 
                     <div className="flex justify-between">
                       <span>Carbon-Neutral Delivery</span>
                       <span className="font-mono text-[#2D2825]">
-                        {shippingFee === 0 ? 'FREE' : `$${shippingFee}`}
+                        {shippingFee === 0 ? 'FREE' : `₹${shippingFee}`}
                       </span>
                     </div>
 
                     <div className="flex justify-between text-base font-serif font-bold text-[#2D2825] pt-3 border-t border-[#DFCBB9]">
                       <span>Grand Total</span>
-                      <span className="font-mono tabular-nums">${finalTotal.toFixed(2)}</span>
+                      <span className="font-mono tabular-nums">₹{finalTotal.toFixed(2)}</span>
                     </div>
                   </div>
                 </div>
@@ -482,7 +482,7 @@ export const CheckoutModal: React.FC = () => {
                     className="w-full py-3.5 text-xs sm:text-sm font-semibold text-white bg-[#B25329] hover:bg-[#973F19] rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2"
                   >
                     <Lock className="w-4 h-4" />
-                    <span>Authorize & Pay ${finalTotal.toFixed(2)}</span>
+                    <span>Authorize & Pay ₹{finalTotal.toFixed(2)}</span>
                   </button>
 
                   <div className="text-[11px] text-center text-[#7B7068] leading-tight">
