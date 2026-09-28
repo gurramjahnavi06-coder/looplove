@@ -1,0 +1,6 @@
+{
+  "name": "Hearth & Loop | Handmade Crochet & Artisan Gifts",
+  "description": "Bespoke handcrafted crochet goods, heirloom throws, amigurumi keepsakes, community reviews, and personalized custom gift requests with secure checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
