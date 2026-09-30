@@ -40,22 +40,38 @@ export const Footer: React.FC = () => {
               Workshop: 420 Pine Needle Mill, Burlington, VT 05401
             </div>
 
-            {/* Instagram Account Connection */}
-            <div className="pt-2">
+            {/* Instagram Accounts Connection */}
+            <div className="pt-2 flex flex-col gap-2">
               <a
                 href="https://www.instagram.com/loop_love.store/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-[#332B25] hover:bg-[#3F352E] text-white border border-[#483B32] transition-colors text-xs group"
+                className="inline-flex items-center gap-2.5 px-3 py-2 rounded-xl bg-[#332B25] hover:bg-[#3F352E] text-white border border-[#483B32] transition-colors text-xs group"
               >
                 <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-[#FF543E] via-[#DE0043] to-[#7B008B] flex items-center justify-center text-white shrink-0 shadow-xs">
                   <Instagram className="w-3.5 h-3.5" />
                 </div>
-                <div className="text-left">
-                  <div className="text-[10px] text-[#A89A8E] leading-none">Follow us on Instagram</div>
+                <div className="text-left flex-1">
+                  <div className="text-[10px] text-[#A89A8E] leading-none">Studio Storefront</div>
                   <div className="font-semibold text-white group-hover:text-[#CF9943] transition-colors">@loop_love.store</div>
                 </div>
-                <ExternalLink className="w-3 h-3 text-[#A89A8E] ml-1 group-hover:translate-x-0.5 transition-transform" />
+                <ExternalLink className="w-3 h-3 text-[#A89A8E] group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/_jaan_u_1423/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-3 py-2 rounded-xl bg-[#2A231F] hover:bg-[#382E28] text-white border border-[#443830] transition-colors text-xs group"
+              >
+                <div className="w-6 h-6 rounded-lg bg-[#B25329] flex items-center justify-center text-white shrink-0 shadow-xs">
+                  <Instagram className="w-3.5 h-3.5" />
+                </div>
+                <div className="text-left flex-1">
+                  <div className="text-[10px] text-[#A89A8E] leading-none">Owner & Artisan</div>
+                  <div className="font-semibold text-[#E5C398] group-hover:text-white transition-colors">@_jaan_u_1423</div>
+                </div>
+                <ExternalLink className="w-3 h-3 text-[#A89A8E] group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
           </div>
@@ -203,8 +219,17 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright row */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#7B6E64] gap-4">
-          <div>
-            © {new Date().getFullYear()} Loop Love Studio LLC. All rights reserved. Handcrafted with non-toxic fibers.
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span>© {new Date().getFullYear()} Loop Love Studio LLC.</span>
+            <span>Handcrafted with love by founder & artisan</span>
+            <a
+              href="https://www.instagram.com/_jaan_u_1423/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#E0D5CA] hover:text-[#CF9943] underline font-medium"
+            >
+              @_jaan_u_1423
+            </a>
           </div>
 
           <div className="flex items-center gap-4 text-[11px]">

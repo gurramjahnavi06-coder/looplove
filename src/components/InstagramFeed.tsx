@@ -13,6 +13,22 @@ interface InstagramPost {
 const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: 'post-1',
+    image: '/src/assets/images/heart_hair_clips_1790742732035.jpg',
+    caption: 'Heartthrob clips so cute! Hand-crocheted mini red hearts on snap barrettes for sweet daily hair accents ❤️✨ #LoopLoveStore',
+    likes: 842,
+    comments: 76,
+    tag: 'Heart Clips'
+  },
+  {
+    id: 'post-2',
+    image: '/src/assets/images/crochet_heart_keychain_1790742744444.jpg',
+    caption: 'Add a touch of handmade love to your daily life! This adorable crochet heart keychain is perfect for treating yourself or gifting to a loved one 💕 DM to order!',
+    likes: 915,
+    comments: 88,
+    tag: 'Heart Keychain'
+  },
+  {
+    id: 'post-3',
     image: '/src/assets/images/crochet_meadow_throw_blanket_1790578352080.jpg',
     caption: 'Gentle morning light blocking our signature waffle throw in terracotta & oatmeal wool ☕️🍂 #LoopLoveStore',
     likes: 428,
@@ -20,7 +36,7 @@ const INSTAGRAM_POSTS: InstagramPost[] = [
     tag: 'Heirloom Blankets'
   },
   {
-    id: 'post-2',
+    id: 'post-4',
     image: '/src/assets/images/crochet_small_charms_bookmarks_1790581110179.jpg',
     caption: 'Pocket-sized happiness! Finishing a batch of mini strawberry keychains & sunflower bookmarks 🍓✨',
     likes: 612,
@@ -28,7 +44,7 @@ const INSTAGRAM_POSTS: InstagramPost[] = [
     tag: 'Small Crochet'
   },
   {
-    id: 'post-3',
+    id: 'post-5',
     image: '/src/assets/images/handmade_greeting_cards_1790581127290.jpg',
     caption: 'Deckled cotton rag paper meet miniature hand-crocheted lavender blossoms. Blank inside for your handwritten words 🌿💌',
     likes: 389,
@@ -36,33 +52,18 @@ const INSTAGRAM_POSTS: InstagramPost[] = [
     tag: 'Botanical Cards'
   },
   {
-    id: 'post-4',
+    id: 'post-6',
     image: '/src/assets/images/vintage_letter_keepsake_photos_1790581145853.jpg',
     caption: 'Custom calligraphy love letters on antiqued tea-stained paper with beeswax wax seals & sepia prints 🕯️🕊️',
     likes: 547,
     comments: 48,
     tag: 'Vintage Letters'
-  },
-  {
-    id: 'post-5',
-    image: '/src/assets/images/crochet_amigurumi_woodland_fox_1790578364178.jpg',
-    caption: 'Bramble the forest fox ready to be bundled into an unbleached cotton parcel for a nursery in Bangalore 🦊🤎',
-    likes: 721,
-    comments: 63,
-    tag: 'Amigurumi'
-  },
-  {
-    id: 'post-6',
-    image: '/src/assets/images/crochet_botanical_tote_bag_1790578379787.jpg',
-    caption: 'Slip-stitching 13 daisy granny squares together. Sturdy organic cotton made to carry your farmers market haul 🌼🧺',
-    likes: 495,
-    comments: 39,
-    tag: 'Market Totes'
   }
 ];
 
 export const InstagramFeed: React.FC = () => {
   const instagramUrl = 'https://www.instagram.com/loop_love.store/';
+  const ownerInstagramUrl = 'https://www.instagram.com/_jaan_u_1423/';
 
   return (
     <section className="py-16 sm:py-20 bg-[#FAF7F2] border-t border-[#EADBCC]">
@@ -76,7 +77,7 @@ export const InstagramFeed: React.FC = () => {
               <span>Studio Dispatch on Instagram</span>
             </div>
             
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#231E1B]">
                 @loop_love.store
               </h2>
@@ -84,10 +85,20 @@ export const InstagramFeed: React.FC = () => {
                 <CheckCircle2 className="w-3 h-3 text-[#B25329]" />
                 Official Studio
               </span>
+              <a
+                href={ownerInstagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[11px] font-semibold bg-[#F5EBE1] hover:bg-[#EBDDCF] text-[#8C3C1B] px-3 py-1 rounded-full border border-[#DFCBB9] transition-colors"
+              >
+                <Instagram className="w-3 h-3 text-[#B25329]" />
+                <span>Owner: @_jaan_u_1423</span>
+                <ExternalLink className="w-2.5 h-2.5 opacity-70" />
+              </a>
             </div>
 
             <p className="text-xs sm:text-sm text-[#635952] mt-2 max-w-xl leading-relaxed">
-              Peek behind the scenes in our yarn studio. Follow daily stitch reels, new dye lots, packaging ASMR, and customer unboxings.
+              Peek behind the scenes in our yarn studio. Follow daily stitch reels, new dye lots, packaging ASMR, and personal work by founder & artisan <a href={ownerInstagramUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#B25329] hover:underline">@_jaan_u_1423</a>.
             </p>
           </div>
 
@@ -96,11 +107,22 @@ export const InstagramFeed: React.FC = () => {
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#B25329] via-[#C86D51] to-[#D47A41] hover:brightness-110 rounded-xl transition-all shadow-sm hover:shadow"
+              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#B25329] via-[#C86D51] to-[#D47A41] hover:brightness-110 rounded-xl transition-all shadow-sm hover:shadow"
             >
               <Instagram className="w-4 h-4" />
               <span>Follow @loop_love.store</span>
               <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+            </a>
+
+            <a
+              href={ownerInstagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-[#2D2825] bg-[#EFE4D6] hover:bg-[#E5DACD] border border-[#D8C7B5] rounded-xl transition-colors"
+            >
+              <Instagram className="w-3.5 h-3.5 text-[#B25329]" />
+              <span>Owner @_jaan_u_1423</span>
+              <ExternalLink className="w-3 h-3 opacity-70" />
             </a>
 
             <a

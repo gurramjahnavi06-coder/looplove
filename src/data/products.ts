@@ -2,6 +2,60 @@ import { Product } from '../types';
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'heartthrob-crochet-clips',
+    name: 'Heartthrob Mini Crochet Hair Clips',
+    subtitle: 'Adorably sweet handmade crimson crochet hearts on classic black snap barrettes',
+    category: 'small-crochet',
+    price: 30,
+    originalPrice: 45,
+    image: '/src/assets/images/heart_hair_clips_1790742732035.jpg',
+    description: 'Add a touch of playful handmade charm to your hairstyle! These heartthrob crochet hair clips feature individually hand-hooked textured red hearts securely bound onto non-slip black metal snap barrettes. Lightweight, comfortable to wear all day, and gentle on all hair types.',
+    makerNotes: 'Each mini heart is hand-stitched with premium fine-count cotton yarn for a tight, durable stitch that keeps its heart shape without fraying.',
+    craftingTimeHours: 0.5,
+    dimensions: 'Heart: 1.4" x 1.2", Snap Clip: 2" (5cm)',
+    material: '100% Combed Cotton Yarn & Coated Steel Snap Barrette',
+    yarnWeight: 'Fine Sport (#2)',
+    careInstructions: 'Spot clean only with a slightly damp cloth. Avoid submerging the metal clip in water.',
+    inStock: true,
+    stockCount: 35,
+    colors: [
+      { name: 'Ruby Cherry Red', hex: '#C2182B' },
+      { name: 'Blush Rose Petal', hex: '#F29CA3' },
+      { name: 'Midnight Berry', hex: '#731224' }
+    ],
+    rating: 4.9,
+    reviewCount: 52,
+    isBestseller: true,
+    isNewArrival: true
+  },
+  {
+    id: 'crochet-heart-keychain',
+    name: 'Handmade Crochet Heart Keychain',
+    subtitle: 'Cute pocket-sized heart charm with silver keyring — perfect for keys, bags & gifting',
+    category: 'small-crochet',
+    price: 30,
+    originalPrice: 45,
+    image: '/src/assets/images/crochet_heart_keychain_1790742744444.jpg',
+    description: 'Add a touch of handmade love to your daily life! This adorable crochet heart keychain is perfect for treating yourself or gifting to a loved one. Features a lovingly hand-stitched crochet heart attached to a durable silver link chain and split keyring. Looks gorgeous on tote bags, backpacks, or daily key sets.',
+    makerNotes: 'Crocheted with soft yet sturdy spun cotton. Made in small artisanal batches with love. DM us on Instagram @loop_love.store for custom colors!',
+    craftingTimeHours: 0.5,
+    dimensions: 'Heart: 1.8" x 1.6", Total Length with Keyring: 3.5"',
+    material: '100% Premium Cotton Yarn with Silver-Tone Stainless Steel Hardware',
+    yarnWeight: 'DK / Light Worsted (#3)',
+    careInstructions: 'Gently spot clean with mild soapy water and let air dry.',
+    inStock: true,
+    stockCount: 40,
+    colors: [
+      { name: 'Pastel Blush Pink', hex: '#F9CCD3' },
+      { name: 'Vibrant Crimson Red', hex: '#D72323' },
+      { name: 'Vanilla Cream', hex: '#FDF6E2' }
+    ],
+    rating: 5.0,
+    reviewCount: 68,
+    isBestseller: true,
+    isNewArrival: true
+  },
+  {
     id: 'small-crochet-charms',
     name: 'Mini Strawberry & Flora Charm Set',
     subtitle: 'Hand-crocheted strawberry keychain charm, sunflower tassel & mug rug coaster',

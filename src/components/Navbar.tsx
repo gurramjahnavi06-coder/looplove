@@ -49,18 +49,28 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       {/* Top promotional bar - slim, restrained */}
       <div className="bg-[#EFE7DC] border-b border-[#E3D7C8] px-4 py-2 text-center text-xs text-[#5C4A3E] font-medium tracking-wide flex items-center justify-center gap-2 flex-wrap">
-        <span>Complimentary gift wrap & handwritten note on all orders</span>
+        <span>Complimentary gift wrap on all orders</span>
         <span aria-hidden="true">·</span>
         <span>Free shipping across India over ₹999</span>
+        <span aria-hidden="true">·</span>
+        <span>Handcrafted by</span>
+        <a
+          href="https://www.instagram.com/_jaan_u_1423/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 font-bold text-[#B25329] hover:underline"
+        >
+          <Instagram className="w-3.5 h-3.5" />
+          <span>@_jaan_u_1423</span>
+        </a>
         <span aria-hidden="true">·</span>
         <a
           href="https://www.instagram.com/loop_love.store/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 font-semibold text-[#B25329] hover:underline"
+          className="font-medium text-[#7A6A5E] hover:text-[#B25329] hover:underline"
         >
-          <Instagram className="w-3.5 h-3.5" />
-          <span>Follow @loop_love.store</span>
+          @loop_love.store
         </a>
       </div>
 
@@ -269,14 +279,24 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span>Chat with AI Assistant</span>
               </button>
               <a
+                href="https://www.instagram.com/_jaan_u_1423/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 text-center text-xs font-semibold text-white bg-gradient-to-r from-[#B25329] to-[#C86D51] rounded-lg shadow-2xs flex items-center justify-center gap-1.5"
+              >
+                <Instagram className="w-3.5 h-3.5" />
+                <span>Follow Owner @_jaan_u_1423</span>
+              </a>
+              <a
                 href="https://www.instagram.com/loop_love.store/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 text-center text-xs font-semibold text-white bg-gradient-to-r from-[#B25329] via-[#C86D51] to-[#DE0043] rounded-lg shadow-2xs flex items-center justify-center gap-1.5"
+                className="w-full py-2.5 text-center text-xs font-semibold text-[#3D332C] bg-[#EAE0D3] rounded-lg border border-[#DFCBB9] flex items-center justify-center gap-1.5"
               >
-                <Instagram className="w-3.5 h-3.5" />
-                <span>Follow @loop_love.store on Instagram</span>
+                <Instagram className="w-3.5 h-3.5 text-[#B25329]" />
+                <span>Storefront @loop_love.store</span>
               </a>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, HeartHandshake, Feather } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, HeartHandshake, Feather, Instagram } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 export const Hero: React.FC = () => {
@@ -56,6 +56,29 @@ export const Hero: React.FC = () => {
                 <Sparkles className="w-4 h-4 text-[#B25329]" />
                 <span>Request Custom Piece</span>
               </button>
+            </div>
+
+            {/* Owner & Maker credit */}
+            <div className="pt-2 flex flex-wrap items-center gap-2 text-xs text-[#6B5E55]">
+              <span>Handmade with love by founder & artisan</span>
+              <a
+                href="https://www.instagram.com/_jaan_u_1423/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#B25329] hover:underline inline-flex items-center gap-1"
+              >
+                <Instagram className="w-3.5 h-3.5" />
+                <span>@_jaan_u_1423</span>
+              </a>
+              <span aria-hidden="true" className="text-[#C4B2A3]">·</span>
+              <a
+                href="https://www.instagram.com/loop_love.store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#7B7068] hover:text-[#B25329] hover:underline inline-flex items-center gap-1"
+              >
+                <span>Store @loop_love.store</span>
+              </a>
             </div>
 
             {/* Claim to proof adjacency: unboxed trust markers */}

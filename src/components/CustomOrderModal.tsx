@@ -376,14 +376,24 @@ export const CustomOrderModal: React.FC = () => {
                     </div>
                   )}
                 </div>
-                <div className="text-[11px] text-[#7B7068] mt-1.5 flex items-center gap-1.5">
+                <div className="text-[11px] text-[#7B7068] mt-1.5 flex flex-wrap items-center gap-1.5">
                   <Instagram className="w-3 h-3 text-[#B25329]" />
-                  <span>Prefer chatting on social? Send color references & questions via DM to</span>
+                  <span>Prefer chatting on social? Send color references & custom inquiries to</span>
+                  <a
+                    href="https://www.instagram.com/_jaan_u_1423/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-[#B25329] hover:underline inline-flex items-center gap-0.5"
+                  >
+                    <span>@_jaan_u_1423</span>
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                  <span>or</span>
                   <a
                     href="https://www.instagram.com/loop_love.store/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-[#B25329] hover:underline inline-flex items-center gap-0.5"
+                    className="font-semibold text-[#7B7068] hover:text-[#B25329] hover:underline inline-flex items-center gap-0.5"
                   >
                     <span>@loop_love.store</span>
                     <ExternalLink className="w-2.5 h-2.5" />
