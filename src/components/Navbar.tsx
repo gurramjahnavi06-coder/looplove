@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Heart, Sparkles, Search, Menu, X } from 'lucide-react';
+import { ShoppingBag, Heart, Sparkles, Search, Menu, X, MessageSquare, Instagram } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 interface NavbarProps {
@@ -48,8 +48,20 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       {/* Top promotional bar - slim, restrained */}
-      <div className="bg-[#EFE7DC] border-b border-[#E3D7C8] px-4 py-2 text-center text-xs text-[#5C4A3E] font-medium tracking-wide">
-        Complimentary gift wrap & handwritten botanical note on all orders · Free shipping across India over ₹999
+      <div className="bg-[#EFE7DC] border-b border-[#E3D7C8] px-4 py-2 text-center text-xs text-[#5C4A3E] font-medium tracking-wide flex items-center justify-center gap-2 flex-wrap">
+        <span>Complimentary gift wrap & handwritten note on all orders</span>
+        <span aria-hidden="true">·</span>
+        <span>Free shipping across India over ₹999</span>
+        <span aria-hidden="true">·</span>
+        <a
+          href="https://www.instagram.com/loop_love.store/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 font-semibold text-[#B25329] hover:underline"
+        >
+          <Instagram className="w-3.5 h-3.5" />
+          <span>Follow @loop_love.store</span>
+        </a>
       </div>
 
       {/* Main Top Bar Contract: 3 Zones */}
@@ -142,6 +154,33 @@ export const Navbar: React.FC<NavbarProps> = ({
               )}
             </button>
 
+            {/* Instagram Profile Link */}
+            <a
+              href="https://www.instagram.com/loop_love.store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Follow @loop_love.store on Instagram"
+              className="p-2.5 text-[#5C524C] hover:text-[#B25329] transition-colors rounded-lg hover:bg-[#F2EBE1]"
+              aria-label="Follow Loop Love on Instagram"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+
+            {/* n8n Chat Assistant trigger button */}
+            <button
+              onClick={() => {
+                const trigger = document.querySelector<HTMLElement>('.chat-trigger, .chat-button, button[class*="chat-"]');
+                if (trigger) {
+                  trigger.click();
+                }
+              }}
+              title="Chat with n8n Assistant"
+              className="p-2.5 text-[#5C524C] hover:text-[#B25329] transition-colors rounded-lg hover:bg-[#F2EBE1]"
+              aria-label="Open chat assistant"
+            >
+              <MessageSquare className="w-5 h-5" />
+            </button>
+
             {/* Shopping Bag Button */}
             <button
               onClick={openCart}
@@ -218,6 +257,27 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 Request Custom Piece / Monogram
               </button>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  const trigger = document.querySelector<HTMLElement>('.chat-trigger, .chat-button, button[class*="chat-"]');
+                  if (trigger) trigger.click();
+                }}
+                className="w-full py-2.5 text-center text-xs font-semibold text-[#2D2825] bg-[#EFE6DC] rounded-lg border border-[#DFCBB9] flex items-center justify-center gap-1.5"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-[#B25329]" />
+                <span>Chat with AI Assistant</span>
+              </button>
+              <a
+                href="https://www.instagram.com/loop_love.store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 text-center text-xs font-semibold text-white bg-gradient-to-r from-[#B25329] via-[#C86D51] to-[#DE0043] rounded-lg shadow-2xs flex items-center justify-center gap-1.5"
+              >
+                <Instagram className="w-3.5 h-3.5" />
+                <span>Follow @loop_love.store on Instagram</span>
+              </a>
             </div>
           </div>
         )}

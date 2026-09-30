@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Check, Heart } from 'lucide-react';
+import { Mail, Check, Heart, Instagram, ExternalLink } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 export const Footer: React.FC = () => {
@@ -38,6 +38,25 @@ export const Footer: React.FC = () => {
             </p>
             <div className="text-xs text-[#8C7E72] font-mono">
               Workshop: 420 Pine Needle Mill, Burlington, VT 05401
+            </div>
+
+            {/* Instagram Account Connection */}
+            <div className="pt-2">
+              <a
+                href="https://www.instagram.com/loop_love.store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-[#332B25] hover:bg-[#3F352E] text-white border border-[#483B32] transition-colors text-xs group"
+              >
+                <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-[#FF543E] via-[#DE0043] to-[#7B008B] flex items-center justify-center text-white shrink-0 shadow-xs">
+                  <Instagram className="w-3.5 h-3.5" />
+                </div>
+                <div className="text-left">
+                  <div className="text-[10px] text-[#A89A8E] leading-none">Follow us on Instagram</div>
+                  <div className="font-semibold text-white group-hover:text-[#CF9943] transition-colors">@loop_love.store</div>
+                </div>
+                <ExternalLink className="w-3 h-3 text-[#A89A8E] ml-1 group-hover:translate-x-0.5 transition-transform" />
+              </a>
             </div>
           </div>
 
@@ -122,6 +141,17 @@ export const Footer: React.FC = () => {
                   className="hover:text-white transition-colors"
                 >
                   Community Reviews
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/loop_love.store/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  <Instagram className="w-3 h-3 text-[#EAA937]" />
+                  <span>Instagram: @loop_love.store</span>
                 </a>
               </li>
               <li>

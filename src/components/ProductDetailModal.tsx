@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Heart, Star, Clock, ShieldCheck, Gift, Check, Sparkles, AlertCircle } from 'lucide-react';
+import { X, Heart, Star, Clock, ShieldCheck, Gift, Check, Sparkles, AlertCircle, Instagram, ExternalLink } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 export const ProductDetailModal: React.FC = () => {
@@ -320,6 +320,22 @@ export const ProductDetailModal: React.FC = () => {
                   )}
                 </div>
 
+                {/* Instagram preview link */}
+                <div className="pt-3 border-t border-[#EADBCC] flex items-center justify-between text-xs">
+                  <span className="text-[#635952] flex items-center gap-1.5">
+                    <Instagram className="w-3.5 h-3.5 text-[#B25329]" />
+                    <span>See stitch videos on Instagram:</span>
+                  </span>
+                  <a
+                    href="https://www.instagram.com/loop_love.store/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-[#B25329] hover:underline flex items-center gap-1"
+                  >
+                    <span>@loop_love.store</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
 
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Package, Printer, Sparkles, MapPin, Truck, Calendar, X } from 'lucide-react';
+import { CheckCircle2, Package, Printer, Sparkles, MapPin, Truck, Calendar, X, Instagram, ExternalLink } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 export const OrderConfirmationModal: React.FC = () => {
@@ -149,6 +149,28 @@ export const OrderConfirmationModal: React.FC = () => {
                 <span className="font-serif font-mono">₹{activeReceipt.total.toFixed(2)}</span>
               </div>
             </div>
+          </div>
+
+          {/* Instagram Unboxing prompt */}
+          <div className="p-3.5 bg-[#F6EDE2] rounded-xl border border-[#DFD1C1] flex items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#FF543E] via-[#DE0043] to-[#7B008B] flex items-center justify-center text-white shrink-0">
+                <Instagram className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="font-semibold text-[#2D2825]">Tag @loop_love.store in your unboxing</div>
+                <div className="text-[11px] text-[#7B7068]">Share your slow-crafted parcel with #LoopLoveStore!</div>
+              </div>
+            </div>
+            <a
+              href="https://www.instagram.com/loop_love.store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 text-[11px] font-semibold text-white bg-[#B25329] hover:bg-[#973F19] rounded-lg transition-colors flex items-center gap-1 shrink-0"
+            >
+              <span>Follow</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
 
           {/* Action buttons */}

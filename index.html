@@ -12,10 +12,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
   </head>
   <body class="bg-[#FAF7F2] text-[#2D2825] antialiased selection:bg-[#EADFD2] selection:text-[#523B2A]">
     <div id="root"></div>
+    <div id="n8n-chat"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        webhookUrl: 'https://jahnavi1423.app.n8n.cloud/webhook/65e369e1-429c-40d8-b263-35bf3371e002/chat',
+        showWelcomeScreen: true,
+        initialMessages: [
+          'Hello! 🧶 Welcome to Loop Love.',
+          'I am your handmade crochet assistant. Ask me about custom orders, sizing, yarn care, or gift recommendations!'
+        ],
+        i18n: {
+          en: {
+            title: 'Loop Love Assistant',
+            subtitle: 'Handmade Crochet & Gift Support',
+            footer: 'Loop Love · Powered by n8n',
+            getStarted: 'Start a Conversation',
+            inputPlaceholder: 'Ask about yarn, orders, gifts...'
+          }
+        }
+      });
+    </script>
   </body>
 </html>
 

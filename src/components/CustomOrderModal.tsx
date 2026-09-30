@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Sparkles, Check, Upload, Calendar, Clock, DollarSign, Heart, Info } from 'lucide-react';
+import { X, Sparkles, Check, Upload, Calendar, Clock, DollarSign, Heart, Info, Instagram, ExternalLink } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 export const CustomOrderModal: React.FC = () => {
@@ -375,6 +375,19 @@ export const CustomOrderModal: React.FC = () => {
                       <span className="text-xs text-emerald-700 font-medium">Image attached</span>
                     </div>
                   )}
+                </div>
+                <div className="text-[11px] text-[#7B7068] mt-1.5 flex items-center gap-1.5">
+                  <Instagram className="w-3 h-3 text-[#B25329]" />
+                  <span>Prefer chatting on social? Send color references & questions via DM to</span>
+                  <a
+                    href="https://www.instagram.com/loop_love.store/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-[#B25329] hover:underline inline-flex items-center gap-0.5"
+                  >
+                    <span>@loop_love.store</span>
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
                 </div>
               </div>
 

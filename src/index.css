@@ -4,6 +4,20 @@
   --font-serif: 'Fraunces', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+
+  /* n8n Chat Widget Theme - Loop Love Warm Terracotta & Oatmeal Palette */
+  --chat--color-primary: #B25329;
+  --chat--color-primary-shade-50: #99411D;
+  --chat--color-primary-shade-100: #803415;
+  --chat--color-secondary: #F4EDE2;
+  --chat--color-light: #FAF7F2;
+  --chat--color-light-shade-50: #F3ECE2;
+  --chat--color-dark: #2D2825;
+  --chat--color-dark-shade-50: #403833;
+  --chat--window--width: 380px;
+  --chat--window--height: 560px;
+  --chat--border-radius: 1.25rem;
+  --chat--font-family: var(--font-sans);
 }
 
 body {

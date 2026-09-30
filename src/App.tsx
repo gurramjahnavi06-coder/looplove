@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { ProductGrid } from './components/ProductGrid';
 import { CraftStorySection } from './components/CraftStorySection';
 import { CommunityReviews } from './components/CommunityReviews';
+import { InstagramFeed } from './components/InstagramFeed';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { CustomOrderModal } from './components/CustomOrderModal';
 import { CartDrawer } from './components/CartDrawer';
@@ -20,9 +21,9 @@ const MainLayout: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#2D2825] font-sans selection:bg-[#EADFD2] selection:text-[#523B2A]">
       
-      {/* Global floating notification pill */}
+      {/* Global floating notification pill (placed bottom-left so n8n chat bubble sits freely at bottom-right) */}
       {notification && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#2D2825] text-white px-4 py-3 rounded-2xl shadow-xl border border-[#483B32] flex items-center gap-2.5 text-xs animate-in slide-in-from-bottom-5 duration-300">
+        <div className="fixed bottom-6 left-6 z-50 bg-[#2D2825] text-white px-4 py-3 rounded-2xl shadow-xl border border-[#483B32] flex items-center gap-2.5 text-xs animate-in slide-in-from-bottom-5 duration-300">
           <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
           <span>{notification}</span>
         </div>
@@ -47,6 +48,8 @@ const MainLayout: React.FC = () => {
         <CraftStorySection />
 
         <CommunityReviews />
+
+        <InstagramFeed />
       </main>
 
       {/* Footer */}
